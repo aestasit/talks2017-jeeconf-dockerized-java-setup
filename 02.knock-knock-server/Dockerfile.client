@@ -1,0 +1,11 @@
+FROM java:8
+
+ADD ./src /src
+
+RUN /usr/bin/javac /src/KnockKnockClient.java
+
+WORKDIR /src
+
+ENV CLASSPATH=/src
+
+CMD /usr/bin/java KnockKnockClient knock-knock-server2

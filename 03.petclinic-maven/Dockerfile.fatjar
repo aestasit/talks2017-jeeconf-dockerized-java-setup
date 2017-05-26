@@ -1,0 +1,8 @@
+FROM java:8
+
+ADD ./spring-petclinic/target/spring-petclinic-1.5.1.jar /usr/bin/petclinic.jar
+
+EXPOSE 8080
+
+CMD java -jar /usr/bin/petclinic.jar
+ 

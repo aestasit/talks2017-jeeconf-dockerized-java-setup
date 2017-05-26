@@ -1,0 +1,4 @@
+FROM tomcat:8
+
+ADD ./spring-framework-petclinic/target/petclinic.war /usr/local/tomcat/webapps
+
