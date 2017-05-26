@@ -10,17 +10,17 @@ public class GracefulServer {
         try {
           Thread.sleep(2000);
         } catch (Exception e) {
-        }  
-      } 
+        }
+      }
     });
 
     System.out.println("Started");
-    
+
     while (running) {
       Thread.sleep(1000);
     }
-      
+
     System.out.println("Exited nicely");
-      
+
   }
 }
