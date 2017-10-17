@@ -14,7 +14,7 @@ docker run --rm -it \
            -v $PWD/target:/target \
            -e CLASSPATH=/target \
            -p 4444:4444 \
-           --net=knock-knock \
+           --net=knock-knock-net \
            --name=knock-knock \
            java \
            java KnockKnockServer

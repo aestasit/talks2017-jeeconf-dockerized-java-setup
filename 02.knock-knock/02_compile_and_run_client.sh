@@ -9,7 +9,7 @@ docker run --rm -it \
            -v $PWD/target:/target \
            -e CLASSPATH=/target \
            --name=knock-knock-client \
-           --net=knock-knock \
+           --net=knock-knock-net \
            java \
            java KnockKnockClient knock-knock
 
