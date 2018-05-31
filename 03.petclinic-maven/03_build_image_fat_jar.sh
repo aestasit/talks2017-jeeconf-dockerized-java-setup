@@ -1,7 +1,7 @@
 #!/bin/bash
- 
+
 docker volume create --name maven-repo
- 
+
 docker run -it --rm \
        -v $PWD/spring-petclinic:/src \
        -v maven-repo:/root/.m2 \

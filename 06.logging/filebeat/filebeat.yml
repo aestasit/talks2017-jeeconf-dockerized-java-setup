@@ -1,0 +1,12 @@
+filebeat.prospectors:
+ - input_type: log
+   paths: 
+     - "/containers/*/*-json.log"
+   json.keys_under_root: true
+   json.overwrite_keys: true
+   json.add_error_key: true
+   json.message_key: "log"
+   tags: ["json"]
+
+output.elasticsearch:
+   hosts: ["elasticsearch:9200"]

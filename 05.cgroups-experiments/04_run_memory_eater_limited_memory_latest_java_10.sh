@@ -1,15 +1,17 @@
 #!/bin/sh
 
-echo "Showing default JVM headp settings for max. heap:"
+echo "Showing default JVM heap settings for max. heap:"
 docker run --rm -it \
            -v $PWD:/src \
            -e CLASSPATH=/src \
-           java \
+           -m 100M \
+           openjdk:10 \
            java -XX:+PrintFlagsFinal | grep MaxHeap
 
-echo "Running memory eater with no limits:"
+echo "Running memory eater with container memory limitted to 100M:"
 docker run --rm -it \
            -v $PWD:/src \
            -e CLASSPATH=/src \
-           java \
+           -m 100M \
+           openjdk:10 \
            java MemoryEater

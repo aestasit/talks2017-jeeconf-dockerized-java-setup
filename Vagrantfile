@@ -1,7 +1,7 @@
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "aestasit/devops-ubuntu-14.04"
+  config.vm.box = "aestasit/devops-ubuntu-16.04"
   config.vm.hostname = "docker-java"
   config.vm.network "private_network", ip: "192.168.123.45"
 
